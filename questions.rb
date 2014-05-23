@@ -188,11 +188,14 @@ end
 # where 'special character' means anything apart from the letters
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
+	# string.include?/[<>'"/;`%]/
+	# return true if (string=~/[<>'"/;`%]/)
 end
 
 # get the upper limit of a range. e.g. for the range 1..20, you
 # should return 20
 def get_upper_limit_of(range)
+	range.last
 end
 
 # should return true for a 3 dot range like 1...20, false for a 
