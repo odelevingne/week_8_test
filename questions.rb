@@ -100,7 +100,6 @@ end
 # turn an array into itself repeated twice. So [1, 2, 3]
 # becomes [1, 2, 3, 1, 2, 3]
 def double_array(array)
-
 end
 
 # convert a symbol into a string
@@ -133,6 +132,7 @@ end
 # . e.g. the array ['cat', 'dog', 'fish'] becomes
 # ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
 def get_all_letters_in_array_of_words(array)
+	array.join.chars.uniq.sort
 end
 
 # swap the keys and values in a hash. e.g.
