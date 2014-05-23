@@ -166,7 +166,7 @@ describe 'the Friday test :)' do
     expect(n).to eq 'The Lion the Witch and the Wardrobe'
   end
 
-  fit 'check_a_string_for_special_characters' do
+  specify 'check_a_string_for_special_characters' do
     a = check_a_string_for_special_characters 'ABCdef123'
     b = check_a_string_for_special_characters 'ABC@def123!'
 
@@ -179,7 +179,7 @@ describe 'the Friday test :)' do
     expect(n).to eq 20
   end
 
-  specify 'is_a_3_dot_range?' do
+  fit 'is_a_3_dot_range?' do
     a = is_a_3_dot_range? 1..20
     b = is_a_3_dot_range? 1...20
 
@@ -194,7 +194,7 @@ describe 'the Friday test :)' do
     expect(b).to eq 1.7320508075688772
   end
 
-  specify 'word_count_a_file' do
+  fit 'word_count_a_file' do
     n = word_count_a_file 'lorem.txt'
     expect(n).to eq 70
   end

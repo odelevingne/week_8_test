@@ -152,7 +152,8 @@ end
 # take out all the capital letters from a string
 # so 'Hello JohnDoe' becomes 'ello ohnoe'
 def remove_capital_letters_from_string(string)
-	capitals = ()
+	capitals_letters = ('A'..'Z').to_a
+
 
 end
 
@@ -204,6 +205,7 @@ end
 # should return true for a 3 dot range like 1...20, false for a 
 # normal 2 dot range
 def is_a_3_dot_range?(range)
+	range.exclude_end?
 end
 
 # get the square root of a number
@@ -212,6 +214,11 @@ end
 
 # count the number of words in a file
 def word_count_a_file(file_path)
+	file = File.open(file_path, 'r')
+	array = []
+	file.each {|line| array << line}
+	array.first.split(" ").count
+
 end
 
 # --- tougher ones ---
