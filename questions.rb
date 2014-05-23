@@ -146,6 +146,7 @@ end
 # add all the keys and all the values together, e.g.
 # {1 => 1, 2 => 2} becomes 6
 def add_together_keys_and_values(hash)
+	hash.flatten.inject(0) {|result, element| result + element}
 end
 
 # take out all the capital letters from a string
@@ -190,8 +191,8 @@ end
 # where 'special character' means anything apart from the letters
 # a-z (uppercase and lower) or numbers
 def check_a_string_for_special_characters(string)
-	# string.include?/[<>'"/;`%]/
-	# return true if (string=~/[<>'"/;`%]/)
+	return true if string.include?'/\W/'
+else false
 end
 
 # get the upper limit of a range. e.g. for the range 1..20, you
