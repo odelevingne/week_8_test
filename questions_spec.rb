@@ -8,27 +8,27 @@ end
 
 describe 'the Friday test :)' do
   
-  specify 'select_elements_starting_with_a' do
+  fit 'select_elements_starting_with_a' do
     n = select_elements_starting_with_a ['bananas', 'apples', 'pears', 'avocados']
     expect(n).to eq ['apples', 'avocados']
   end
 
-  specify 'select_elements_starting_with_vowel' do
+  fit 'select_elements_starting_with_vowel' do
     n = select_elements_starting_with_vowel ['john', 'david', 'omar', 'fred', 'idris', 'angela']
     expect(n).to eq ['omar', 'idris', 'angela']
   end
 
-  specify 'remove_nils_from_array' do
+  fit 'remove_nils_from_array' do
     n = remove_nils_from_array ['a', 'b', nil, nil, false, 'c', nil]
     expect(n).to eq ['a', 'b', false, 'c']
   end
 
-  specify 'remove_nils_and_false_from_array' do
+  fit 'remove_nils_and_false_from_array' do
     n = remove_nils_and_false_from_array ['a', 'b', nil, nil, false, 'c', nil]
     expect(n).to eq ['a', 'b', 'c']
   end
 
-  specify 'reverse_every_element_in_array' do
+  fit 'reverse_every_element_in_array' do
     n = reverse_every_element_in_array ['dog', 'monkey', 'elephant']
     expect(n).to eq ['god', 'yeknom', 'tnahpele']
   end
@@ -40,22 +40,22 @@ describe 'the Friday test :)' do
     expect(sorted).to eq [['Bob', 'Clive'], ['Bob', 'Dave'], ['Clive', 'Dave']]
   end
 
-  specify 'all_elements_except_first_3' do
+  fit 'all_elements_except_first_3' do
     n = all_elements_except_first_3 [1, 2, 3, 4, 5, 6, 7]
     expect(n).to eq [4, 5, 6, 7]
   end
 
-  specify 'add_element_to_beginning_of_array' do
+  fit 'add_element_to_beginning_of_array' do
     n = add_element_to_beginning_of_array [2, 3, 4, 5], 1
     expect(n).to eq [1, 2, 3, 4, 5]
   end
 
-  specify 'array_sort_by_last_letter_of_word' do
+  fit 'array_sort_by_last_letter_of_word' do
     n = array_sort_by_last_letter_of_word ['sky', 'puma', 'maker']
     expect(n).to eq ['puma', 'maker', 'sky']
   end
 
-  specify 'get_first_half_of_string' do
+  fit 'get_first_half_of_string' do
     a = get_first_half_of_string 'banana'
     b = get_first_half_of_string 'apple'
 
@@ -63,7 +63,7 @@ describe 'the Friday test :)' do
     expect(b).to eq 'app'
   end
 
-  specify 'make_numbers_negative' do
+  fit 'make_numbers_negative' do
     a = make_numbers_negative 5
     b = make_numbers_negative -7
 
@@ -71,27 +71,27 @@ describe 'the Friday test :)' do
     expect(b).to eq -7
   end
 
-  specify 'separate_array_into_even_and_odd_numbers' do
+  fit 'separate_array_into_even_and_odd_numbers' do
     n = separate_array_into_even_and_odd_numbers [1, 2, 3, 4, 5, 6, 7]
     expect(n).to eq [[2, 4, 6], [1, 3, 5, 7]]
   end
 
-  specify 'number_of_elements_that_are_palindromes' do
+  fit 'number_of_elements_that_are_palindromes' do
     n = number_of_elements_that_are_palindromes ['bob', 'radar', 'alex', 'noon', 'banana']
     expect(n).to eq 3
   end
 
-  specify 'shortest_word_in_array' do
+  fit 'shortest_word_in_array' do
     n = shortest_word_in_array %w(here is a bunch of words of different lengths)
     expect(n).to eq 'a'
   end
 
-  specify 'longest_word_in_array' do
+  fit 'longest_word_in_array' do
     n = longest_word_in_array %w(here is a bunch of words of different lengths)
     expect(n).to eq 'different'
   end
 
-  specify 'total_of_array' do
+  fit 'total_of_array' do
     n = total_of_array [1, 3, 5, 6, 2, 8]
     expect(n).to eq 25
   end
@@ -101,17 +101,17 @@ describe 'the Friday test :)' do
     expect(n).to eq [1, 2, 3, 1, 2, 3]
   end
 
-  specify 'turn_symbol_into_string' do
+  fit 'turn_symbol_into_string' do
     n = turn_symbol_into_string :foobar
     expect(n).to eq 'foobar'
   end
 
-  specify 'average_of_array' do
+  fit 'average_of_array' do
     n = average_of_array [10, 15, 25]
     expect(n).to eq 17
   end
 
-  specify 'get_elements_until_greater_than_five' do
+  fit 'get_elements_until_greater_than_five' do
     n = get_elements_until_greater_than_five [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
     expect(n).to eq [1, 3, 5, 4, 1, 2]
   end
