@@ -233,13 +233,20 @@ end
 # return true if the date is a uk bank holiday for 2014
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
+BANK_HOLIDAYS = [1/1, 18/4, 21/4, 5/5, 26/5, 25/8, 25/12, 26/12]
+
 def is_a_2014_bank_holiday?(date)
+	new_date = date.strftime('%d/%m')
+	BANK_HOLIDAYS.include?(new_date)
 end
+
+
 
 # given your birthday this year, this method tells you
 # the next year when your birthday will fall on a friday
 # e.g. january 1st, will next be a friday in 2016
 def your_birthday_is_on_a_friday_in_the_year(birthday)
+	
 end
 
 # in a file, total the number of times words of different lengths
